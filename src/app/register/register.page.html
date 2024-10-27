@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="4" size="12" offset-md="4">
+        <h1>Register with your email and get started with Task Manager.</h1>
+        <br>
+        <form (submit)="on_submit()" action="#">
+          <ion-input 
+            label="Full name" 
+            labelPlacement="floating" 
+            fill="outline" 
+            placeholder="First Name + Last Name" 
+            type="text"
+            required
+            class="ion-margin-top">
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+          </ion-input>
+          <ion-input 
+            type="email"
+            label="Email"
+            labelPlacement="floating" 
+            fill="outline" 
+            placeholder="user@domain.com" 
+            class="ion-margin-top">
+            <ion-icon name="mail-outline" slot="start"></ion-icon>
+          </ion-input>
+          <br>
+          <ion-input 
+            type="password"
+            label="Password"
+            labelPlacement="floating" 
+            fill="outline" 
+            placeholder="secret password" 
+            required
+            class="ion-margin-top">
+            <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+          </ion-input>
+          <ion-input 
+            type="password"
+            label="Repeat Password"
+            labelPlacement="floating"
+            fill="outline"
+            placeholder="Repeat secret password" 
+            class="ion-margin-top">
+            <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+          </ion-input>
+          <br>
+          <ion-select label="Country" placeholder="Select Country" labelPlacement="floating" class="ion-margin-top" fill="outline">
+            <ion-icon name="globe-outline" slot="start"></ion-icon>
+            <ion-select-option></ion-select-option>
+          </ion-select>
+          <ion-select label="Language" placeholder="Select Language" labelPlacement="floating" class="ion-margin-top" fill="outline">
+            <ion-icon name="language-outline" slot="start"></ion-icon>
+            <ion-select-option></ion-select-option>
+          </ion-select>
+          <br>
+          <ion-button expand="block" type="submit">
+            REGISTER
+          </ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
